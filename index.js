@@ -25,7 +25,7 @@ function mockSendingData(socket, ms) {
 
   setInterval(() => {
     console.log('send mock emotions data');
-    socket.emit("emotions data", emotionsMockData);
+    socket.emit("emotions results", emotionsMockData);
     mutateData(emotionsMockData);
   }, ms);
 }
