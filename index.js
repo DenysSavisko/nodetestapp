@@ -30,7 +30,8 @@ function mockSendingData(socket, ms) {
   }, ms);
 }
 
-var socket = io('https://riff-poc.riffplatform.com/');
+// var socket = io('https://riff-poc.riffplatform.com/');
+var socket = io('https://sg0xm.sse.codesandbox.io/');
 
 socket.on('connect', () => {
     mockSendingData(socket);
