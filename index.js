@@ -34,5 +34,5 @@ function mockSendingData(socket, ms) {
 var socket = io('https://sg0xm.sse.codesandbox.io/');
 
 socket.on('connect', () => {
-    mockSendingData(socket);
+    mockSendingData(socket, 3000);
 });
