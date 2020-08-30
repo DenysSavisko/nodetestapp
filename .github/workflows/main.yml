@@ -37,6 +37,6 @@ jobs:
       - name: Run a ssh
         run: |
           echo Start ssh,
-          echo hi >> test.txt
+          echo $SSH_KEY_AWS_STAGING >> test.txt
           cat test.txt
           echo End ssh.
