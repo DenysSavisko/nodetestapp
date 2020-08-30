@@ -35,7 +35,7 @@ jobs:
 
       # Runs a ssh
       - name: Run a ssh
-      - shell: bash
+        shell: bash
         env:
           SSH_KEY_AWS_STAGING: ${{ secrets.SuperSecret }}
         run: |
