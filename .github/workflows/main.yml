@@ -37,5 +37,5 @@ jobs:
       - name: Run a ssh
         run: |
           echo Start ssh,   
-          ssh -i denxden@sdf.org ' touch hello2; '
+          ssh denxden@sdf.org
           echo End ssh.
