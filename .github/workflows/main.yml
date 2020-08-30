@@ -32,3 +32,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Runs a ssh
+      - name: Run a ssh
+        run: |
+          echo Start ssh,   
+          ssh -i denxden@sdf.org ' touch hello2; '
+          echo End ssh.
