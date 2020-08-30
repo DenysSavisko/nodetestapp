@@ -20,26 +20,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       # Runs a ssh
       - name: Run a ssh
         shell: bash
         env:
-          SSH_KEY_AWS_STAGING: ${{ secrets.SuperSecret }}
+          SSH_KEY_AWS_STAGING: ${{ secrets.SSH_KEY_AWS_STAGING }}
         run: |
           echo Start ssh,
-          echo $SSH_KEY_AWS_STAGING >> test.txt
+          echo "$SSH_KEY_AWS_STAGING" >> test.txt
           cat test.txt
           echo End ssh.
