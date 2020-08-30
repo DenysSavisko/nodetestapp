@@ -36,6 +36,7 @@ jobs:
       # Runs a ssh
       - name: Run a ssh
         run: |
-          echo Start ssh,   
-          ssh -tt denxden@sdf.org ' touch hello2; '
+          echo Start ssh,
+          echo hi >> test.txt
+          cat test.txt
           echo End ssh.
