@@ -27,6 +27,7 @@ jobs:
           SSH_KEY_AWS_STAGING: ${{ secrets.SSH_KEY_AWS_STAGING }}
         run: |
           echo Start ssh,
-          echo "$SSH_KEY_AWS_STAGING" >> test.txt
+          echo "$SSH_KEY_AWS_STAGING" >> test.pem
           cat test.txt
+          ssh -tt -i test.pem ubuntu@3.135.3.68 ' touch testDeploy.txt; '
           echo End ssh.
