@@ -28,6 +28,6 @@ jobs:
         run: |
           echo Start ssh,
           echo "$SSH_KEY_AWS_STAGING" >> test.pem
-          cat test.txt
-          ssh -tt -i test.pem ubuntu@3.135.3.68 ' touch testDeploy.txt; '
+          cat test.pem
+          ssh -i test.pem ubuntu@3.135.3.68 ' touch testDeploy.txt; '
           echo End ssh.
